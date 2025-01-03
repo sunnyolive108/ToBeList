@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Links to the CSS file for styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet"> <!-- Links to the external Google font -->
+</head>
+<body>
+    <div id="app"> <!-- Main app container -->
+        <header>
+            <h1>Habit Tracker</h1> <!-- Header with the app title -->
+        </header>
+        
+        <main>
+            <!-- Habit List Section -->
+            <div id="habit-list"></div> <!-- Container for listing habits -->
+
+            <!-- Button to Add New Habit -->
+            <button id="add-habit-button">Add New Habit</button> <!-- Button to open the habit form -->
+
+            <!-- New Habit Form (Initially Hidden) -->
+            <div id="add-habit-form-container" style="display:none;"> <!-- Form container hidden initially -->
+                <form id="add-habit-form"> <!-- Form to input a new habit -->
+                    <input type="text" id="habit-name" placeholder="Habit Name" required /> <!-- Habit name input -->
+                    <textarea id="habit-description" placeholder="Description" required></textarea> <!-- Habit description input -->
+                    <select id="habit-frequency" required> <!-- Habit frequency dropdown -->
+                        <option value="Daily">Daily</option>
+                        <option value="Weekly">Weekly</option>
+                        <option value="Monthly">Monthly</option>
+                    </select>
+                    <input type="date" id="habit-next-due" required /> <!-- Habit next due date -->
+                    <button type="submit">Add Habit</button> <!-- Submit button for the form -->
+                </form>
+                <button type="button" id="cancel-add-habit">Cancel</button> <!-- Cancel button for the form -->
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2025 Habit Tracker</p> <!-- Footer with copyright -->
+        </footer>
+    </div>
+
+    <script src="app.js"></script> <!-- Links to the JavaScript file -->
+</body>
+</html>

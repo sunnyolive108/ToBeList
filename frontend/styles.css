@@ -1,0 +1,186 @@
+/* Global styles */
+* {
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width/height */
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif; /* Sets the default font to Arial */
+    background-color: #363637; /* Sets a dark background color */
+    color: #333; /* Sets dark gray text color */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Makes the body fill the viewport height */
+    text-align: center; /* Centers the text inside the body */
+}
+
+/* Main App Container */
+#app {
+    width: 100%; /* Sets width to 100% */
+    max-width: 1200px; /* Limits the width to 1200px max */
+    padding: 30px; /* Adds padding around the content */
+    background-color: #fff; /* Sets the background color to white */
+    border-radius: 12px; /* Rounds the corners of the app container */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the container */
+    transition: all 0.3s ease; /* Adds smooth transition for any change in styles */
+}
+
+/* Header (Logo/Title) */
+header {
+    font-family: 'Space Grotesk', sans-serif; /* Sets the font for the header */
+    font-size: 3rem; /* Sets the font size to 3rem */
+    font-weight: 600; /* Makes the font weight bold */
+    letter-spacing: 2px; /* Adds space between the letters */
+    color: #333; /* Sets the color to dark gray */
+    text-transform: uppercase; /* Makes the text uppercase */
+    background-image: linear-gradient(90deg, #5733cc, #31109c); /* Adds a gradient background */
+    background-clip: text; /* Clips the background to the text */
+    color: transparent; /* Makes the text transparent so the gradient is visible */
+    padding: 20px; /* Adds padding around the header */
+    text-align: center; /* Centers the header text */
+    animation: fadeIn 1s ease-out; /* Adds fade-in animation */
+}
+
+/* Footer Text */
+footer {
+    margin-top: 20px; /* Adds space between the footer and content above */
+    font-size: 0.9rem; /* Sets a smaller font size for the footer text */
+    color: #888; /* Sets the text color to a lighter gray */
+}
+
+/* Habit List Container */
+#habit-list {
+    display: flex; /* Uses flexbox to align habit items */
+    flex-direction: column; /* Arranges items in a vertical column */
+    gap: 20px; /* Adds space between items */
+    margin-bottom: 25px; /* Adds space at the bottom of the list */
+}
+
+/* Habit Item */
+.habit-item {
+    background-color: #f9f9f9; /* Sets a light gray background for each habit item */
+    padding: 18px; /* Adds padding inside the habit item */
+    border-radius: 8px; /* Rounds the corners of each habit item */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around each habit item */
+    display: flex; /* Uses flexbox to align content horizontally */
+    justify-content: space-between; /* Distributes items with space between them */
+    align-items: center; /* Aligns the items vertically in the center */
+    transition: all 0.3s ease-in-out; /* Adds smooth transition for hover effect */
+    position: relative; /* Positions the habit item relative to its container */
+}
+
+.habit-item:hover {
+    background-color: #e8e8e8; /* Changes the background color on hover */
+    transform: translateY(-5px); /* Lifts the habit item slightly on hover */
+}
+
+/* Habit Title */
+.habit-item h3 {
+    font-size: 1.3rem; /* Sets the font size of the habit title */
+    font-weight: 500; /* Sets the font weight to medium */
+    color: #333; /* Sets the title color to dark gray */
+    flex-grow: 1; /* Allows the title to grow and take up available space */
+    text-align: left; /* Aligns the text to the left */
+}
+
+/* Button Styles */
+button {
+    padding: 12px 25px; /* Adds padding inside the button */
+    font-size: 1rem; /* Sets the font size of the button */
+    background-color: #5733cc; /* Sets the background color to a purple shade */
+    color: white; /* Sets the button text color to white */
+    border: none; /* Removes the default border */
+    border-radius: 6px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    transition: all 0.3s ease; /* Adds smooth transition for hover effect */
+    width: 150px; /* Sets a fixed width for the button */
+    position: absolute; /* Positions the button inside the habit item */
+    right: 20px; /* Places the button 20px from the right */
+    top: 50%; /* Vertically centers the button */
+    transform: translateY(-50%); /* Adjusts the vertical position of the button to truly center it */
+}
+
+/* Button Hover Effects */
+button:hover {
+    background-color: #31109c; /* Changes the background color on hover */
+    transform: scale(1.05) translateY(-50%); /* Slightly enlarges the button and keeps it vertically centered */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow around the button on hover */
+}
+
+/* Position the form outside of the app container, below */
+#add-habit-form-container {
+    margin-top: 40px; /* Adds space above the form */
+}
+
+/* New Habit Form Styling */
+#add-habit-form-container form {
+    display: flex; /* Uses flexbox to arrange form elements */
+    flex-direction: column; /* Stacks the form elements vertically */
+    gap: 15px; /* Adds space between form elements */
+    margin-top: 20px; /* Adds space above the form */
+    padding-bottom: 20px; /* Adds padding at the bottom of the form */
+}
+
+/* Style the Cancel Button (positioned at the bottom of the form) */
+#cancel-add-habit {
+    background-color: #f44336; /* Sets the cancel button background to red */
+    color: white; /* Makes the text color white */
+    border: none; /* Removes default border */
+    padding: 12px; /* Adds padding inside the button */
+    cursor: pointer; /* Changes the cursor to pointer on hover */
+    transition: all 0.3s ease; /* Adds smooth transition for hover effect */
+    margin-top: 15px; /* Adds space above the cancel button */
+}
+
+/* Cancel button hover effect */
+#cancel-add-habit:hover {
+    background-color: #d32f2f; /* Darkens the background on hover */
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+/* Responsive Styles (Mobile first) */
+@media (max-width: 768px) {
+    body {
+        padding: 15px; /* Reduces padding on smaller screens */
+    }
+
+    #app {
+        padding: 15px; /* Reduces padding on smaller screens */
+    }
+
+    header {
+        font-size: 2rem; /* Reduces font size of the header */
+    }
+
+    .habit-item {
+        padding: 15px; /* Reduces padding for habit items */
+        flex-direction: column; /* Stacks habit items vertically */
+        gap: 10px; /* Adds space between vertically stacked items */
+    }
+
+    button {
+        width: 100%; /* Makes the button take up full width */
+        padding: 14px; /* Increases padding for easier clicking */
+        position: relative; /* Resets the absolute positioning */
+        top: auto; /* Resets vertical position */
+        transform: none; /* Resets transform for mobile view */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Starts with invisible element */
+    }
+    100% {
+        opacity: 1; /* Ends with visible element */
+    }
+}
+
+/* Apply fade-in animation to habit items */
+.habit-item {
+    animation: fadeIn 0.6s ease-out; /* Applies the fade-in animation to each habit item */
+}
