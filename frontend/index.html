@@ -8,17 +8,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet"> <!-- Links to the external Google font -->
 </head>
 <body>
+    <!-- Title moved outside the app container -->
+    <header style="position: absolute; top: 20px; left: 20px;">
+        <h1>Habit Tracker</h1> <!-- Header with the app title -->
+    </header>
+
     <div id="app"> <!-- Main app container -->
-        <header>
-            <h1>Habit Tracker</h1> <!-- Header with the app title -->
-        </header>
-        
         <main>
             <!-- Habit List Section -->
             <div id="habit-list"></div> <!-- Container for listing habits -->
 
             <!-- Button to Add New Habit -->
-            <button id="add-habit-button">Add New Habit</button> <!-- Button to open the habit form -->
+            <div id="add-habit-button-container"> <!-- Container for Add New Habit button -->
+                <button id="add-habit-button">Add New Habit</button> <!-- Button to open the habit form -->
+            </div>
 
             <!-- New Habit Form (Initially Hidden) -->
             <div id="add-habit-form-container" style="display:none;"> <!-- Form container hidden initially -->

@@ -30,19 +30,18 @@ body {
 
 /* Header (Logo/Title) */
 header {
-    font-family: 'Space Grotesk', sans-serif; /* Sets the font for the header */
-    font-size: 3rem; /* Sets the font size to 3rem */
-    font-weight: 600; /* Makes the font weight bold */
-    letter-spacing: 2px; /* Adds space between the letters */
-    color: #333; /* Sets the color to dark gray */
-    text-transform: uppercase; /* Makes the text uppercase */
-    background-image: linear-gradient(90deg, #5733cc, #31109c); /* Adds a gradient background */
-    background-clip: text; /* Clips the background to the text */
-    color: transparent; /* Makes the text transparent so the gradient is visible */
-    padding: 20px; /* Adds padding around the header */
-    text-align: center; /* Centers the header text */
-    animation: fadeIn 1s ease-out; /* Adds fade-in animation */
+    position: absolute; /* Position the title absolutely */
+    top: 100px; /* Position it near the top */
+    left: 70px; /* Position it near the left */
+    font-family: 'Space Grotesk', sans-serif; /* Ensure consistent font */
+    font-size: 3rem; /* Large font size */
+    font-weight: 600; /* Bold font weight */
+    background-image: linear-gradient(90deg, #19171f, #32126258); /* Gradient background for text */
+    color: transparent; /* Transparent text to show gradient */
+    background-clip: text; /* Clip background to text */
+    text-align: left; /* Align text to the left */
 }
+
 
 /* Footer Text */
 footer {
